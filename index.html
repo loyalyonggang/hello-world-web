@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: radial-gradient(circle at top, #1e3a8a, #0f172a 55%);
+        color: #fff;
+      }
+      .card {
+        width: min(92vw, 720px);
+        padding: 48px 32px;
+        text-align: center;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(16px);
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(2.5rem, 8vw, 4.5rem);
+      }
+      p {
+        margin: 0;
+        font-size: clamp(1rem, 3vw, 1.35rem);
+        opacity: 0.92;
+      }
+      .tag {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.12);
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <h1>Hello World</h1>
+      <p>网页已由小码创建并部署。</p>
+      <div class="tag">Live on GitHub Pages</div>
+    </main>
+  </body>
+</html>
