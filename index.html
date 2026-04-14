@@ -249,7 +249,6 @@
       }
 
       .hero-right {
-        position: relative;
         padding: 26px;
         background: linear-gradient(180deg, #f9fcff 0%, #ffffff 100%);
         border-left: 1px solid var(--line);
@@ -282,33 +281,6 @@
         margin: 0;
         color: var(--muted);
         font-size: 15px;
-        line-height: 1.8;
-      }
-
-      .hero-floating {
-        position: absolute;
-        left: -54px;
-        bottom: 44px;
-        width: min(260px, 38vw);
-        padding: 18px 18px 20px;
-        background: rgba(255,255,255,0.92);
-        backdrop-filter: blur(12px);
-        border: 1px solid var(--line);
-        border-radius: 22px;
-        box-shadow: var(--shadow-sm);
-      }
-      .hero-floating strong {
-        display: block;
-        margin-bottom: 8px;
-        font-size: 12px;
-        color: var(--blue);
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-      .hero-floating p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 14px;
         line-height: 1.8;
       }
 
@@ -509,11 +481,6 @@
         }
         .hero-shell { overflow: visible; }
         .hero-right { border-left: 0; border-top: 1px solid var(--line); }
-        .hero-floating {
-          position: static;
-          width: 100%;
-          margin-top: 14px;
-        }
       }
 
       @media (max-width: 780px) {
@@ -596,12 +563,6 @@
                     温和、清晰、克制，是我希望自己在表达里留下的感觉。把难懂的东西讲简单，把有用的方法交到真正需要的人手里。
                   </p>
                 </div>
-              </div>
-              <div class="hero-floating">
-                <strong>About this site</strong>
-                <p>
-                  这是一个面向普通人的个人主页。你会在这里看到我关心的问题、推荐的工具，以及我对 AI、效率和成长的理解。
-                </p>
               </div>
             </aside>
           </div>
