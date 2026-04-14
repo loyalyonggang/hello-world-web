@@ -6,7 +6,7 @@
     <title>学长刚蝈｜把复杂的 AI 和工具，讲给普通人听</title>
     <meta
       name="description"
-      content="学长刚蝈的个人品牌主页第三版：高级极简风格，平衡名字、头像与 Slogan，面向普通人讲清楚 AI 与工具。"
+      content="学长刚蝈的个人主页。关注 AI、效率工具、自动化与产品实践，把复杂的内容讲清楚，把有用的方法交到普通人手里。"
     />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <style>
@@ -23,9 +23,6 @@
         --blue-dark: #005bab;
         --shadow-sm: rgba(0, 0, 0, 0.03) 0 8px 24px;
         --shadow-lg: rgba(0, 0, 0, 0.04) 0 20px 60px;
-        --radius-xl: 32px;
-        --radius-lg: 24px;
-        --radius-md: 18px;
       }
 
       * { box-sizing: border-box; }
@@ -132,9 +129,7 @@
         color: var(--muted);
       }
 
-      .hero {
-        padding: 44px 0 36px;
-      }
+      .hero { padding: 44px 0 36px; }
 
       .hero-shell {
         border: 1px solid var(--line);
@@ -166,7 +161,6 @@
       .hero-badge {
         display: inline-flex;
         align-items: center;
-        gap: 8px;
         width: fit-content;
         padding: 8px 12px;
         border-radius: 999px;
@@ -272,9 +266,7 @@
         display: grid;
         grid-template-rows: 1fr auto;
       }
-      .portrait-wrap {
-        padding: 26px 26px 0;
-      }
+      .portrait-wrap { padding: 26px 26px 0; }
       .portrait {
         width: 100%;
         aspect-ratio: 1 / 1.08;
@@ -328,7 +320,7 @@
       .card {
         background: #fff;
         border: 1px solid var(--line);
-        border-radius: var(--radius-lg);
+        border-radius: 24px;
         padding: 24px;
         box-shadow: var(--shadow-sm);
       }
@@ -355,7 +347,7 @@
       .statement-card {
         padding: 28px;
         border: 1px solid var(--line);
-        border-radius: var(--radius-lg);
+        border-radius: 24px;
         background: #fff;
         box-shadow: var(--shadow-sm);
       }
@@ -394,7 +386,7 @@
       .story-card {
         padding: 24px;
         border: 1px solid var(--line);
-        border-radius: var(--radius-lg);
+        border-radius: 24px;
         background: #fff;
         box-shadow: var(--shadow-sm);
       }
@@ -426,7 +418,7 @@
         align-items: start;
         padding: 18px;
         border: 1px solid var(--line);
-        border-radius: 22px;
+        border-radius: 24px;
         background: #fff;
         box-shadow: var(--shadow-sm);
       }
@@ -462,7 +454,7 @@
         grid-template-columns: 110px 1fr;
         gap: 18px;
         padding: 20px;
-        border-radius: 22px;
+        border-radius: 24px;
         background: #fff;
         border: 1px solid var(--line);
         box-shadow: var(--shadow-sm);
@@ -490,11 +482,11 @@
         background: linear-gradient(135deg, #ffffff 0%, #f4f9ff 100%);
         box-shadow: var(--shadow-lg);
       }
-      .placeholder-box {
+      .contact-note {
         margin-top: 18px;
         padding: 18px 20px;
         border-radius: 18px;
-        border: 1px dashed rgba(0,117,222,0.32);
+        border: 1px solid rgba(0,117,222,0.12);
         background: rgba(255,255,255,0.72);
         color: var(--muted);
         font-size: 15px;
@@ -525,26 +517,17 @@
       }
 
       @media (max-width: 780px) {
-        .nav {
-          flex-direction: column;
-          align-items: flex-start;
-        }
+        .nav { flex-direction: column; align-items: flex-start; }
         .hero-left,
-        .cta {
-          padding: 28px 24px;
-        }
+        .cta { padding: 28px 24px; }
         .hero-right { padding: 20px; }
-        .hero-foot {
-          grid-template-columns: 1fr;
-        }
+        .hero-foot { grid-template-columns: 1fr; }
         .section { padding: 72px 0; }
       }
 
       @media (max-width: 640px) {
         .tool-item,
-        .timeline-item {
-          grid-template-columns: 1fr;
-        }
+        .timeline-item { grid-template-columns: 1fr; }
       }
     </style>
   </head>
@@ -558,10 +541,10 @@
         </a>
         <nav class="nav-links">
           <a href="#about">关于我</a>
-          <a href="#story">学长自述</a>
-          <a href="#tools">AI 工具推荐</a>
-          <a href="#footprints">公开足迹</a>
-          <a href="#contact">联系入口</a>
+          <a href="#story">我的表达</a>
+          <a href="#tools">工具推荐</a>
+          <a href="#footprints">公开信息</a>
+          <a href="#contact">联系我</a>
         </nav>
       </div>
     </header>
@@ -572,18 +555,18 @@
           <div class="hero-grid">
             <section class="hero-left">
               <div class="hero-top">
-                <div class="hero-badge">第三版 · 高级极简 · 平衡型主视觉</div>
+                <div class="hero-badge">个人主页 · AI · 工具 · 自动化</div>
                 <h1>学长刚蝈</h1>
                 <div class="hero-slogan">
                   把复杂的 AI 和工具，讲给普通人听。
                 </div>
                 <div class="hero-lead">
-                  我更想做的，不是把技术讲得更玄，而是把它讲得更清楚、更实用。
-                  如果你刚开始接触 AI、工具、自动化，我希望这里能成为一个轻松、可信、能慢慢入门的起点。
+                  我关注 AI、效率工具、自动化和产品实践。
+                  比起制造概念，我更在意把事情讲明白，把方法做扎实，让普通人也能真正把 AI 用进自己的工作和生活里。
                 </div>
                 <div class="button-group">
-                  <a class="btn primary" href="#story">读读我的自述</a>
-                  <a class="btn secondary" href="#tools">看我推荐的工具</a>
+                  <a class="btn primary" href="#story">了解我在想什么</a>
+                  <a class="btn secondary" href="#tools">看看我推荐什么</a>
                 </div>
               </div>
 
@@ -610,14 +593,14 @@
                 </div>
                 <div class="portrait-caption">
                   <p>
-                    清爽、温和、理性，带一点文艺感，也带一点愿意慢慢把事情讲明白的学长气质。
+                    温和、清晰、克制，是我希望自己在表达里留下的感觉。把难懂的东西讲简单，把有用的方法交到真正需要的人手里。
                   </p>
                 </div>
               </div>
               <div class="hero-floating">
-                <strong>Visual Note</strong>
+                <strong>About this site</strong>
                 <p>
-                  这一版把名字、头像和 Slogan 做成平衡型主视觉：不是谁压过谁，而是让人第一眼就能同时记住你是谁、你长什么气质、你想传达什么。
+                  这是一个面向普通人的个人主页。你会在这里看到我关心的问题、推荐的工具，以及我对 AI、效率和成长的理解。
                 </p>
               </div>
             </aside>
@@ -631,16 +614,16 @@
         <div>
           <div class="section-head">
             <p class="eyebrow">About</p>
-            <h2>我更像一个走在前面一点点的学长</h2>
+            <h2>我更愿意做一个把复杂内容讲清楚的人</h2>
             <p class="section-desc">
-              我不是想用一堆术语把 AI 讲得很厉害的人。对我来说，真正有价值的表达，是让普通人也能听得懂、学得会、用得上。
+              这个时代不缺信息，缺的是判断；不缺工具，缺的是能把工具真正用起来的方法。对我来说，好的表达不是显得厉害，而是让人听得懂、愿意试、真的能用上。
             </p>
           </div>
         </div>
         <div class="statement-card">
           <h3>我希望自己扮演的角色</h3>
           <p>
-            帮你把复杂概念拆开，把有用工具筛出来，把真正能落地的方法整理清楚。你不一定要成为技术专家，也可以先成为一个会用 AI 让自己更轻松的人。
+            像一个走在前面一点点的学长。帮你拆开复杂概念，筛选有用工具，整理清楚路径，让你在面对 AI 和新工具时，不至于被信息淹没，也不会因为门槛感而停在原地。
           </p>
           <div class="tag-wrap">
             <span class="tag">真诚表达</span>
@@ -655,29 +638,29 @@
     <section id="story" class="section">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Story</p>
-          <h2>一段更像“学长自述”的介绍</h2>
+          <p class="eyebrow">Perspective</p>
+          <h2>我想长期分享的，不只是工具本身</h2>
           <p class="section-desc">
-            第三版没有再继续堆内容，而是更强调节奏、留白和阅读体验。希望别人看完后，记住的不只是名字，而是一种温和、可信、能陪着成长的感觉。
+            我更关心的是，普通人应该怎样理解 AI、怎样选择工具、怎样少走弯路。与其追着热点跑，不如先把真正有帮助的东西讲清楚、用起来、沉淀下来。
           </p>
         </div>
         <div class="story-grid">
           <article class="story-card">
             <h3>AI 不该只是少数人的工具</h3>
             <p>
-              很多人都在谈 AI，但对大多数普通人来说，真正的问题不是“有没有听说过”，而是“听完以后不知道怎么开始”。工具太多，信息太乱，最后反而什么都没真正用起来。
+              很多人都听说过 AI，但真正开始用的人并不多。不是因为不需要，而是因为入口太杂、信息太快、门槛太高。越是这样，越需要有人把路讲清楚。
             </p>
           </article>
           <article class="story-card">
-            <h3>我更想做一个翻译者和带路人</h3>
+            <h3>把复杂的问题翻译成人话</h3>
             <p>
-              把复杂内容翻译成人话，把抽象方法变成步骤，把看起来高门槛的东西整理成普通人也敢上手的路径。不是高高在上地教，而是像一个学长一样，陪你先走通第一段路。
+              我喜欢把抽象的内容拆成能理解、能执行、能验证的小步骤。不是为了简化世界，而是为了让普通人也有机会真正走进去。
             </p>
           </article>
           <article class="story-card">
-            <h3>我想分享的，不只是工具本身</h3>
+            <h3>先解决问题，再谈工具</h3>
             <p>
-              我更想分享的是：面对新东西时，怎么判断、怎么选择、怎么少走弯路。学 AI 不只是为了跟上趋势，更是为了让自己多一点效率、多一点理解力，也多一点把想法做成现实的能力。
+              工具更新很快，但真正值得留下来的，始终是那些能解决现实问题的方法。比起追新，我更在意哪些东西适合长期使用。
             </p>
           </article>
         </div>
@@ -688,23 +671,23 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Focus</p>
-          <h2>我在关注什么</h2>
+          <h2>我主要在做什么</h2>
           <p class="section-desc">
-            不是盲目追热点，而是关注那些真正能帮助普通人理解 AI、用好 AI、把 AI 接进日常生活和工作里的方向。
+            围绕 AI、工具和效率展开，但落点始终是同一件事：怎样让一个普通人也能更轻松、更清楚地进入这个变化很快的时代。
           </p>
         </div>
         <div class="cards">
           <article class="card">
-            <h3>AI 入门与认知</h3>
-            <p>帮普通人理解 AI 到底能做什么、不能做什么，以及它真正适合解决哪些问题。</p>
+            <h3>AI 入门与理解</h3>
+            <p>帮人建立基本判断：AI 适合做什么，不适合做什么，什么场景真正值得花时间去学。</p>
           </article>
           <article class="card">
             <h3>效率工具与自动化</h3>
-            <p>筛选值得长期使用的工具，减少试错，让更多人把 AI 真正接入工作和生活流程。</p>
+            <p>关注那些能真正节省时间、降低重复劳动、提升表达和执行效率的工具与方法。</p>
           </article>
           <article class="card">
-            <h3>产品化实践</h3>
-            <p>我喜欢把想法快速做成原型，再从真实使用中迭代，而不是停留在概念和想象里。</p>
+            <h3>产品化与实践</h3>
+            <p>我喜欢把想法尽快做成可用的东西，在真实使用中打磨，而不是只停留在概念层面。</p>
           </article>
         </div>
       </div>
@@ -714,9 +697,9 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Tools</p>
-          <h2>如果你是普通人，我会优先推荐这类 AI 工具</h2>
+          <h2>如果你是普通人，我会优先推荐这三类 AI 工具</h2>
           <p class="section-desc">
-            我不想把工具推荐做成一堆名字堆砌，而更希望你理解它们各自适合解决什么问题。下面这份推荐，偏向“对普通人最容易产生真实帮助”的使用场景。
+            工具很多，但不需要一次学完。对大多数人来说，先从最容易产生真实帮助的工具开始，往往比盲目追求“最强”更重要。
           </p>
         </div>
         <div class="tools-grid">
@@ -725,31 +708,31 @@
               <div class="tool-rank">01</div>
               <div>
                 <h3>通用对话型 AI</h3>
-                <p>适合拿来问问题、拆解任务、整理思路、写初稿、做学习辅助。对新手来说，这是最容易建立“AI 原来真能帮我”的入口。</p>
+                <p>适合问问题、整理思路、拆解任务、辅助学习和写初稿。对新手来说，这是最容易建立信心的一类工具。</p>
               </div>
             </article>
             <article class="tool-item">
               <div class="tool-rank">02</div>
               <div>
                 <h3>写作与内容整理工具</h3>
-                <p>如果你经常要写文案、做总结、列提纲、改表达，这类工具往往最容易带来立竿见影的体验。</p>
+                <p>如果你经常写文案、做总结、列提纲、优化表达，这类工具通常最容易带来立竿见影的改善。</p>
               </div>
             </article>
             <article class="tool-item">
               <div class="tool-rank">03</div>
               <div>
                 <h3>效率与自动化工具</h3>
-                <p>当你开始想把重复流程交给 AI 或自动化脚本，这类工具能帮你把“省一点时间”慢慢变成“省很多时间”。</p>
+                <p>当你开始把重复流程交给工具处理时，时间和精力会明显被释放出来，这类工具适合慢慢建立长期习惯。</p>
               </div>
             </article>
           </div>
           <article class="card">
             <h3>我推荐工具时更看重什么</h3>
             <ul>
-              <li>普通人能不能快速上手，而不是要先学一堆概念。</li>
-              <li>能不能直接解决实际问题，而不是只适合演示。</li>
-              <li>稳定、清晰、长期可用，而不是一时新鲜。</li>
-              <li>是否真的能帮你提升效率、表达、学习或输出。</li>
+              <li>普通人能不能快速上手，而不是先被概念劝退。</li>
+              <li>能不能解决真实问题，而不是只适合展示效果。</li>
+              <li>是否稳定、清晰、值得长期使用。</li>
+              <li>能不能真正提升效率、表达、学习或输出。</li>
             </ul>
             <div class="tag-wrap">
               <span class="tag">先解决问题</span>
@@ -764,10 +747,10 @@
     <section id="footprints" class="section soft">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Public Footprints</p>
-          <h2>我在公开世界留下的一些足迹</h2>
+          <p class="eyebrow">Public Info</p>
+          <h2>目前可以公开确认的信息</h2>
           <p class="section-desc">
-            以下内容仍然基于可公开验证的信息整理：GitHub 公开主页、公开仓库和个人资料字段。这样能保证页面真实、克制，也适合长期使用。
+            这里保留的是可公开验证的内容，主要来自 GitHub 公开主页和公开仓库信息。页面表达可以有温度，但基础信息应该尽量准确、克制。
           </p>
         </div>
         <div class="timeline">
@@ -782,14 +765,14 @@
             <div class="time">方向</div>
             <div>
               <h3>持续关注 AI、前端、自动化与基础设施工具</h3>
-              <p>从公开仓库可见，长期兴趣方向包括 AI 模型网关、Next.js / TypeScript 项目、Cloudflare 相关工具、自托管与自动化实践。</p>
+              <p>从公开仓库可以看出，长期兴趣方向包括 AI 模型网关、Next.js / TypeScript 项目、Cloudflare 相关工具、自托管与自动化实践。</p>
             </div>
           </article>
           <article class="timeline-item">
-            <div class="time">态度</div>
+            <div class="time">风格</div>
             <div>
-              <h3>愿意把想法做成产品原型</h3>
-              <p>我更喜欢通过实际项目去验证想法：先做出来，再优化；先解决真实问题，再持续打磨表达和体验。</p>
+              <h3>偏实践、偏落地、偏长期主义</h3>
+              <p>比起空谈趋势，我更相信先把事情做出来，再通过真实使用不断优化。能留下来的，往往都是经得起使用检验的方法和习惯。</p>
             </div>
           </article>
         </div>
@@ -801,26 +784,24 @@
         <div class="cta">
           <div class="section-head" style="margin-bottom: 18px;">
             <p class="eyebrow">Contact</p>
-            <h2>联系方式入口先留白，但结构已经准备好了</h2>
+            <h2>先从 GitHub 认识我</h2>
             <p class="section-desc">
-              这一版继续保留占位方案。等后面补上真实联系方式时，这里可以自然接入微信、公众号、小红书、B站、邮箱或社群入口，而不用再重构页面结构。
+              如果你想进一步了解我正在关注什么、做过什么，GitHub 是目前最直接的入口。后续也会陆续整理更多内容与联系渠道。
             </p>
           </div>
           <div class="button-group">
-            <a class="btn primary" href="https://github.com/loyalyonggang" target="_blank" rel="noreferrer">先看 GitHub</a>
+            <a class="btn primary" href="https://github.com/loyalyonggang" target="_blank" rel="noreferrer">访问 GitHub</a>
             <a class="btn secondary" href="#top">回到顶部</a>
           </div>
-          <div class="placeholder-box">
-            <strong>后续可补充：</strong><br />
-            微信二维码 / 公众号入口 / 小红书主页 / B站主页 / 邮箱 / 个人社群入口。<br />
-            目前先保留这块区域，保证整站视觉完整，同时给未来的转化入口留出最自然的位置。
+          <div class="contact-note">
+            更多内容会围绕 AI、工具、自动化、效率与实践持续整理。这里会逐步变成一个更完整、也更好用的个人内容入口。
           </div>
         </div>
       </div>
     </section>
 
     <footer>
-      <div class="container">学长刚蝈 · 个人品牌主页第三版 · 高级极简 · 平衡型主视觉</div>
+      <div class="container">学长刚蝈 · 个人主页</div>
     </footer>
   </body>
 </html>
