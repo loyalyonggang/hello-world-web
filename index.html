@@ -3,55 +3,637 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello World</title>
+    <title>学长刚蝈｜把复杂的 AI 和工具，讲给普通人听</title>
+    <meta
+      name="description"
+      content="学长刚蝈的个人品牌主页：关注 AI、效率工具、自动化与产品实践，把复杂的技术讲给普通人听。"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <style>
       :root {
-        color-scheme: light dark;
+        --bg: #ffffff;
+        --bg-soft: #f6f5f4;
+        --text: rgba(0, 0, 0, 0.95);
+        --muted: #615d59;
+        --muted-light: #a39e98;
+        --blue: #0075de;
+        --blue-dark: #005bab;
+        --border: rgba(0, 0, 0, 0.1);
+        --card-shadow: rgba(0, 0, 0, 0.04) 0px 4px 18px,
+          rgba(0, 0, 0, 0.027) 0px 2.025px 7.84688px,
+          rgba(0, 0, 0, 0.02) 0px 0.8px 2.925px,
+          rgba(0, 0, 0, 0.01) 0px 0.175px 1.04062px;
+        --deep-shadow: rgba(0, 0, 0, 0.01) 0px 1px 3px,
+          rgba(0, 0, 0, 0.02) 0px 3px 7px,
+          rgba(0, 0, 0, 0.02) 0px 7px 15px,
+          rgba(0, 0, 0, 0.04) 0px 14px 28px,
+          rgba(0, 0, 0, 0.05) 0px 23px 52px;
       }
-      * { box-sizing: border-box; }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         margin: 0;
-        min-height: 100vh;
+        font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        color: var(--text);
+        background: linear-gradient(180deg, #fff 0%, #fcfbfa 100%);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1120px, calc(100vw - 32px));
+        margin: 0 auto;
+      }
+
+      .section {
+        padding: 88px 0;
+      }
+
+      .section.soft {
+        background: var(--bg-soft);
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 16px 0;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 700;
+        font-size: 15px;
+      }
+
+      .brand-mark {
+        width: 36px;
+        height: 36px;
+        border-radius: 12px;
         display: grid;
         place-items: center;
-        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        background: radial-gradient(circle at top, #1e3a8a, #0f172a 55%);
+        background: linear-gradient(135deg, #0075de 0%, #5ab0ff 100%);
         color: #fff;
+        box-shadow: var(--card-shadow);
       }
-      .card {
-        width: min(92vw, 720px);
-        padding: 48px 32px;
-        text-align: center;
-        border-radius: 24px;
-        background: rgba(255, 255, 255, 0.12);
-        border: 1px solid rgba(255, 255, 255, 0.16);
-        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
-        backdrop-filter: blur(16px);
+
+      .nav-links {
+        display: flex;
+        gap: 18px;
+        font-size: 14px;
+        color: var(--muted);
       }
-      h1 {
-        margin: 0 0 12px;
-        font-size: clamp(2.5rem, 8vw, 4.5rem);
+
+      .nav-links a:hover {
+        color: var(--text);
       }
-      p {
-        margin: 0;
-        font-size: clamp(1rem, 3vw, 1.35rem);
-        opacity: 0.92;
+
+      .button-group {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
       }
-      .tag {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 8px 14px;
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 18px;
         border-radius: 999px;
-        background: rgba(255, 255, 255, 0.12);
-        font-size: 0.95rem;
+        font-size: 15px;
+        font-weight: 600;
+        transition: 0.2s ease;
+        border: 1px solid transparent;
+      }
+
+      .btn.primary {
+        background: var(--blue);
+        color: #fff;
+        box-shadow: var(--card-shadow);
+      }
+
+      .btn.primary:hover {
+        background: var(--blue-dark);
+        transform: translateY(-1px);
+      }
+
+      .btn.secondary {
+        background: #fff;
+        color: var(--text);
+        border-color: var(--border);
+      }
+
+      .btn.secondary:hover {
+        background: #faf9f8;
+      }
+
+      .hero {
+        padding: 88px 0 56px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.3fr 0.9fr;
+        gap: 28px;
+        align-items: stretch;
+      }
+
+      .hero-main,
+      .hero-side {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 28px;
+        box-shadow: var(--deep-shadow);
+      }
+
+      .hero-main {
+        padding: 48px;
+        background: radial-gradient(circle at top right, rgba(0, 117, 222, 0.09), transparent 36%), #fff;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: #f2f9ff;
+        color: #097fe8;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.12px;
+        margin-bottom: 22px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.8rem, 6vw, 4.8rem);
+        line-height: 0.98;
+        letter-spacing: -2px;
+      }
+
+      .hero-subtitle {
+        margin: 20px 0 0;
+        font-size: clamp(1.08rem, 2.1vw, 1.3rem);
+        line-height: 1.6;
+        color: var(--muted);
+        max-width: 720px;
+      }
+
+      .hero-actions {
+        margin-top: 28px;
+      }
+
+      .hero-note {
+        margin-top: 18px;
+        font-size: 14px;
+        color: var(--muted-light);
+      }
+
+      .hero-side {
+        padding: 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .mini-title {
+        margin: 0 0 8px;
+        font-size: 14px;
+        color: var(--muted-light);
+        font-weight: 600;
+      }
+
+      .quote {
+        font-size: 22px;
+        line-height: 1.45;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+      }
+
+      .info-list {
+        display: grid;
+        gap: 12px;
+      }
+
+      .info-item {
+        padding: 14px 16px;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background: #fcfbfa;
+      }
+
+      .info-item strong {
+        display: block;
+        font-size: 13px;
+        color: var(--muted-light);
+        margin-bottom: 6px;
+      }
+
+      .section-head {
+        max-width: 760px;
+        margin-bottom: 32px;
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        color: var(--blue);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        line-height: 1.02;
+        letter-spacing: -1.3px;
+      }
+
+      .section-desc {
+        margin: 14px 0 0;
+        font-size: 18px;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        padding: 24px;
+        box-shadow: var(--card-shadow);
+      }
+
+      .card h3 {
+        margin: 0 0 10px;
+        font-size: 22px;
+        line-height: 1.25;
+        letter-spacing: -0.3px;
+      }
+
+      .card p,
+      .card li {
+        color: var(--muted);
+        line-height: 1.75;
+        font-size: 15px;
+      }
+
+      .card ul {
+        margin: 12px 0 0;
+        padding-left: 18px;
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .tag-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: #fff;
+        border: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 16px;
+      }
+
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 110px 1fr;
+        gap: 18px;
+        padding: 20px;
+        border-radius: 20px;
+        background: #fff;
+        border: 1px solid var(--border);
+        box-shadow: var(--card-shadow);
+      }
+
+      .timeline-item .time {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--blue);
+      }
+
+      .timeline-item h3 {
+        margin: 0 0 8px;
+        font-size: 20px;
+      }
+
+      .cta {
+        background: linear-gradient(135deg, #ffffff 0%, #f2f9ff 100%);
+        border: 1px solid var(--border);
+        border-radius: 28px;
+        box-shadow: var(--deep-shadow);
+        padding: 40px;
+      }
+
+      footer {
+        padding: 28px 0 48px;
+        color: var(--muted-light);
+        font-size: 14px;
+      }
+
+      @media (max-width: 960px) {
+        .hero-grid,
+        .split,
+        .cards {
+          grid-template-columns: 1fr;
+        }
+
+        .timeline-item {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .nav {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .nav-links {
+          flex-wrap: wrap;
+        }
+
+        .hero-main,
+        .hero-side,
+        .cta {
+          padding: 24px;
+          border-radius: 22px;
+        }
+
+        .section {
+          padding: 64px 0;
+        }
       }
     </style>
   </head>
   <body>
-    <main class="card">
-      <h1>Hello World</h1>
-      <p>网页已由小码创建并部署。</p>
-      <div class="tag">Live on GitHub Pages</div>
+    <header>
+      <div class="container nav">
+        <a class="brand" href="#top">
+          <span class="brand-mark">刚</span>
+          <span>学长刚蝈</span>
+        </a>
+        <nav class="nav-links">
+          <a href="#about">关于我</a>
+          <a href="#focus">我在关注什么</a>
+          <a href="#help">我能帮你什么</a>
+          <a href="#footprints">公开足迹</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top" class="container">
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="hero-main">
+            <div class="badge">个人品牌主页 · 懂 AI 的学长</div>
+            <h1>学长刚蝈</h1>
+            <p class="hero-subtitle">
+              把复杂的 AI 和工具，讲给普通人听。
+              我长期关注 AI、自动化、效率工具和产品实践，喜欢把难懂的东西讲清楚，把能用的东西真正做出来。
+            </p>
+            <div class="hero-actions button-group">
+              <a class="btn primary" href="#about">先认识我</a>
+              <a class="btn secondary" href="https://github.com/loyalyonggang" target="_blank" rel="noreferrer">看我的 GitHub</a>
+            </div>
+            <div class="hero-note">
+              给想学 AI 的普通人一个更轻松的入口：少一点术语，多一点能马上用起来的方法。
+            </div>
+          </div>
+
+          <aside class="hero-side">
+            <div>
+              <p class="mini-title">一句我很喜欢的话</p>
+              <div class="quote">
+                “The people who get on in this world are the people who get up and look for circumstances they want, and if they cannot find them, make them.”
+              </div>
+            </div>
+            <div class="info-list">
+              <div class="info-item">
+                <strong>公开身份</strong>
+                Chi Gang · loyalyonggang
+              </div>
+              <div class="info-item">
+                <strong>所在地</strong>
+                JiangSu, China
+              </div>
+              <div class="info-item">
+                <strong>公开组织</strong>
+                GDG suzhou
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
     </main>
+
+    <section id="about" class="section">
+      <div class="container split">
+        <div>
+          <div class="section-head">
+            <p class="eyebrow">About</p>
+            <h2>我更像一个走在前面一点点的学长</h2>
+            <p class="section-desc">
+              我不是想把 AI 讲得高深的人，我更想把它讲得明白。
+              对很多普通人来说，真正的难点不是“AI 不够强”，而是信息太杂、工具太多、门槛太高，不知道到底该从哪里开始。
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <h3>我希望做的事</h3>
+          <p>
+            把复杂的概念拆开，把有用的工具筛出来，把真正能落地的路径整理给普通人。
+            你不一定要成为技术专家，也可以先成为一个会用 AI 提升自己的人。
+          </p>
+          <div class="tag-wrap">
+            <span class="tag">真诚表达</span>
+            <span class="tag">低门槛 AI</span>
+            <span class="tag">工具实践</span>
+            <span class="tag">把想法做出来</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="focus" class="section soft">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Focus</p>
+          <h2>我在关注什么</h2>
+          <p class="section-desc">
+            不是追热点，而是关注那些真正能帮助普通人理解 AI、用好 AI、把 AI 变成日常工具的方向。
+          </p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>AI 入门与认知</h3>
+            <p>
+              帮普通人理解 AI 到底能做什么、不能做什么，以及它真正适合解决哪些问题。
+            </p>
+          </article>
+          <article class="card">
+            <h3>效率工具与自动化</h3>
+            <p>
+              筛选值得长期使用的工具，减少试错，让更多人把 AI 真正接入工作和生活流程里。
+            </p>
+          </article>
+          <article class="card">
+            <h3>产品化实践</h3>
+            <p>
+              我喜欢把想法快速做成原型，再从真实使用中迭代，而不是停留在概念和想象里。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="help" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Value</p>
+          <h2>如果你是普通人，我能帮你什么</h2>
+          <p class="section-desc">
+            我更关心的是：怎样让一个没有太多技术背景的人，也能把 AI 用起来，并从中获得真实帮助。
+          </p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>少走弯路认识 AI</h3>
+            <p>
+              帮你快速建立对 AI 的基本认知，不被夸张宣传带偏，也不被复杂术语吓退。
+            </p>
+          </article>
+          <article class="card">
+            <h3>挑对工具，而不是被工具淹没</h3>
+            <p>
+              工具很多，但并不是每一个都值得用。我更倾向于找到简单、稳定、适合普通人上手的那一批。
+            </p>
+          </article>
+          <article class="card">
+            <h3>从“知道”走到“会用”</h3>
+            <p>
+              比起泛泛而谈，我更希望帮你真正迈出第一步：开始用、持续用、用到自己身上。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="footprints" class="section soft">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Public Footprints</p>
+          <h2>我在公开世界留下的一些足迹</h2>
+          <p class="section-desc">
+            以下内容基于公开可验证的信息整理：GitHub 公开主页、公开仓库和个人资料字段。
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="time">GitHub</div>
+            <div>
+              <h3>公开身份：Chi Gang / loyalyonggang</h3>
+              <p>
+                GitHub 公开主页显示的名称为 Chi Gang，用户名 loyalyonggang，地点为 JiangSu, China，公开组织为 GDG suzhou。
+              </p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="time">方向</div>
+            <div>
+              <h3>持续关注 AI、前端、自动化与基础设施工具</h3>
+              <p>
+                从公开仓库可见，长期兴趣方向包括 AI 模型网关、Next.js / TypeScript 项目、Cloudflare 相关工具、自托管与自动化实践。
+              </p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="time">态度</div>
+            <div>
+              <h3>愿意把想法做成产品原型</h3>
+              <p>
+                我更喜欢通过实际项目去验证想法：先做出来，再优化；先解决真实问题，再不断打磨表达和体验。
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta">
+          <div class="section-head" style="margin-bottom: 22px;">
+            <p class="eyebrow">Start Here</p>
+            <h2>如果你也想学会用 AI，不妨从认识我开始</h2>
+            <p class="section-desc">
+              我相信，普通人也完全可以把 AI 变成真正有用的工具。不是为了追赶风口，而是为了让自己多一点判断力、多一点效率，也多一点可能性。
+            </p>
+          </div>
+          <div class="button-group">
+            <a class="btn primary" href="https://github.com/loyalyonggang" target="_blank" rel="noreferrer">访问 GitHub</a>
+            <a class="btn secondary" href="#top">回到顶部</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        学长刚蝈 · 个人品牌主页 · 基于公开信息整理与表达
+      </div>
+    </footer>
   </body>
 </html>
